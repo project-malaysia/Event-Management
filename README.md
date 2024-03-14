@@ -1,59 +1,40 @@
-This is the main project directory.
+# Event Management
 
+Developed by Northumbria University's Computer Science students, "Project Malaysia" is an innovative event management platform designed to support the Rose Foundation NGO. It facilitates the organization and management of cervical cancer screening events, aiming to increase awareness and participation through advanced technological solutions.
 
-Below is the project Directory Structure :
+## Project Structure
 
-/project-root
-    /src
-        /assets
-            /images
-            /styles
-                /components
-                main.scss
-            /scripts
-                /components
-                app.js
-        /components
-            /Header
-                index.js
-                header.scss
-            /Footer
-                index.js
-                footer.scss
-        /pages
-            /HomePage
-                index.js
-                homePage.scss
-            /AboutPage
-                index.js
-                aboutPage.scss
-        /utils
-        /services
-    /public
-        index.html
-        favicon.ico
-    /config
-    /tests
-        /unit
-        /integration
-    /docs
-    /scripts
-        deploy.sh
-        setup.sh
-    .gitignore
-    README.md
-    package.json
+Below is the structure of our project and a brief description of each directory:
 
-Explanation:
+- `src`: Contains all the source code for your project. This includes JavaScript files, stylesheets, and assets.
+  - `assets`: Houses static files like images, global styles, and scripts.
+    - `images`: Image assets used throughout the project.
+    - `styles`: Global styles and component-specific styles.
+      - `components`: SCSS/CSS styles specific to components.
+      - `main.scss`: Main stylesheet for the project.
+    - `scripts`: JavaScript files for the project.
+      - `components`: JavaScript files specific to components.
+      - `app.js`: Main JavaScript file for the project.
+  - `components`: For reusable UI components (e.g., Header, Footer), each component has its own folder.
+  - `pages`: Contains the code for different pages of your website, allowing for a clear separation of page-specific components and logic.
+  - `utils`: Utility functions that can be used across the project.
+  - `services`: For API calls and external service integrations.
+- `public`: Contains files that should be directly accessible by the web server, such as `index.html`.
+- `config`: Configuration files, like environment variables.
+- `tests`: Unit and integration tests to ensure your code works as expected.
+  - `unit`: Unit tests.
+  - `integration`: Integration tests.
+- `docs`: Documentation for your project, including setup guides and API documentation.
+- `scripts`: Custom scripts for tasks like deployment and environment setup.
 
-    src: Contains all the source code for your project. This includes JavaScript files, stylesheets, and assets.
-    assets: Houses static files like images, global styles, and scripts.
-    components: For reusable UI components (e.g., Header, Footer), each component has its own folder.
-    pages: Contains the code for different pages of your website, allowing for a clear separation of page-specific components and logic.
-    utils: Utility functions that can be used across the project.
-    services: For API calls and external service integrations.
-    public: Contains files that should be directly accessible by the web server, such as index.html.
-    config: Configuration files, like environment variables.
-    tests: Unit and integration tests to ensure your code works as expected.
-    docs: Documentation for your project, including setup guides and API documentation.
-    scripts: Custom scripts for tasks like deployment and environment setup.
+## Getting Started
+
+Still on development.
+
+## Contributing
+
+This project is solely for limited students.
+
+## License
+
+owned by Project-Malaysia team members.
