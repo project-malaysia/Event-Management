@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
  * This component represents the main navigation menu for the website,
  * providing links to all main pages.
  * 
- * @author Petros Tamboutsiaris
+ * @author Petros Tamboutsiaris W21004471
  */
 
 function Menu() {
