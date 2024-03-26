@@ -5,7 +5,7 @@ import Footer from '../components/Footer';
 /**
  * AboutPage page.
  * 
- * It represents the About page of the application.
+ * It represents the About page of the website.
  * 
  * @author Petros Tamboutsiaris W21004471
  */
