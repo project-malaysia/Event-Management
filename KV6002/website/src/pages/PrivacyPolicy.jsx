@@ -6,7 +6,7 @@ import Footer from '../components/Footer';
  * PrivacyPolicy page.
  * 
  * It represents the Privacy Policy page of the website, 
- * located in the footer section below the 'Legal' heading.
+ * located in the footer section, below the 'Legal' heading.
  * 
  * @author Petros Tamboutsiaris W21004471
  */
