@@ -10,7 +10,7 @@ namespace Loginn;
 
 Class SignIn extends Endpoint {
 
-    private $sql = "SELECT id, password_hash FROM account WHERE email = :email";
+    private $sql = "SELECT id, password_hash FROM account WHERE email = :email COLLATE NOCASE";
     private $sqlParams = [];
 
     public function __construct() {
