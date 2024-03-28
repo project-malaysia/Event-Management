@@ -63,6 +63,12 @@ abstract class Router
                     case '/terms-of-service/add/':
                         $endpoint = new \App\EndpointControllers\TermsOfServiceAdd();
                         break;           
+                    case '/signin':
+                    case '/signin/':
+                        $endpoint = new \Loginn\SignIn();
+                    case '/signup':
+                    case '/signup/':
+                        $endpoint = new \Loginn\Signupp();
                     default:
                         /**
                         * If the endpoint is not recognized, throw a
