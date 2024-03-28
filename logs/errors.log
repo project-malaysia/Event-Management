@@ -1,0 +1,12 @@
+[2024-03-20 20:17:52] Error: Undefined constant "hello" in C:\Users\mridg\OneDrive\Desktop\Event_Management\mian.php on line 10
+Stack trace:
+#0 {main}
+
+[2024-03-20 20:18:44] Error: Undefined constant "hello" in C:\Users\mridg\OneDrive\Desktop\Event_Management\mian.php on line 10
+Stack trace:
+#0 {main}
+
+[2024-03-20 20:19:15] Error: Undefined constant "hello" in C:\Users\mridg\OneDrive\Desktop\Event_Management\mian.php on line 10
+Stack trace:
+#0 {main}
+

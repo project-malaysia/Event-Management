@@ -4,7 +4,7 @@ if(!defined('SECURE')) {
     exit('Direct script access is not allowed');
 }
 
-ini_set('display_errors', '0'); // Disable error display
+ini_set('display_errors', '1'); // Disable error display
 error_reporting(E_ALL); // Report all errors
 
 class ErrorHandler {
@@ -17,6 +17,7 @@ class ErrorHandler {
         set_error_handler([$this, 'handleError']);
         set_exception_handler([$this, 'handleException']);
         register_shutdown_function([$this, 'handleShutdown']);
+
     }
 
     public function handleError($severity, $message, $file, $line) {
