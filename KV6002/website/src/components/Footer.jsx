@@ -13,8 +13,9 @@ import ColourMode from "../components/ColourMode";
  * - Quick Links: Direct links to each main page of the website for easy navigation.
  * - Privacy Policy and Terms of Service: Links to the legal documents governing the use of the website.
  * - Settings: Allows users to switch between light mode and dark mode for better accessibility.
- * - Social Media Links: Links to the (imaginary) social media profiles of the Rose Foundation, 
+ * - Social Media Links: Links to the social media profiles of the Rose Foundation, 
  *   created and managed by Petros Tamboutsiaris.
+ * - Copyright Notice at the bottom.
  *  
  * @author Petros Tamboutsiaris W21004471
  */
@@ -31,7 +32,7 @@ function Footer() {
     };
 
     return (
-        <footer className="bg-purple-900 text-white py-8 dark:bg-black">
+        <footer className="bg-purple-900 text-white pt-8 dark:bg-black">
             <div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
                 {/* Quick Links Section */}
                 <div className="flex flex-col md:flex-row justify-end md:justify-start items-center md:items-start">
@@ -45,29 +46,33 @@ function Footer() {
                     </div>
                     {/* Legal Links Section */}
                     <div className="flex flex-col items-center md:items-start">
-                        <h3 className="text-lg font-bold mb-2">Legal</h3>
+                        <h3 className="text-lg font-bold mb-2 mr-40">Legal</h3>
                         {/* Legal Links */}
                         <Link to="/privacy-policy" className="text-blue-200 hover:underline mb-2 dark:text-blue-500" onClick={scrollToTop}>Privacy Policy</Link>
                         <Link to="/terms-of-service" className="text-blue-200 hover:underline dark:text-blue-500" onClick={scrollToTop}>Terms Of Service</Link>
                     </div>
                     {/* Settings Section */}
-                    <div className="flex flex-col items-center md:items-start mb-4 md:mb-0 mr-12">
+                    <div className="flex flex-col items-center md:items-start mb-4 md:mb-0 mr-40">
                         <h3 className="mx-10 text-lg font-bold mb-2">Settings</h3>
                         {/* Theme Mode Switch */}
                         <ColourMode />
                     </div>
+                    {/* Social Media Links Section */}
+                    <div className="flex flex-col">
+                        <h3 className="text-lg font-bold mb-2">Follow us on our social media to be informed about the events and much more!</h3>
+                        {/* Social Media Links */}
+                        <nav className="flex space-x-4">
+                            <a href="https://www.instagram.com/rose_foundationn?igsh=MWZhOGxyZGE1czg5Nw==" className="text-blue-200 hover:underline dark:text-blue-500" target="_blank" rel="noopener noreferrer">Instagram</a>
+                            <a href="https://www.facebook.com/" className="text-blue-200 hover:underline dark:text-blue-500" target="_blank" rel="noopener noreferrer">Facebook</a>
+                            <a href="https://www.tiktok.com/@rose_foundationn?_t=8l51N5sEsa0&_r=1" className="text-blue-200 hover:underline dark:text-blue-500" target="_blank" rel="noopener noreferrer">TikTok</a>
+                            <a href="https://discord.gg/Fr6vwFbn" className="text-blue-200 hover:underline dark:text-blue-500" target="_blank" rel="noopener noreferrer">Discord</a>
+                        </nav>
+                    </div>
                 </div>
-                {/* Social Media Links Section */}
-                <div className="flex flex-col">
-                    <p className="text-lg font-bold mb-2 mr-12">Follow us on social media to be informed about the events and much more!</p>
-                    {/* Social Media Links */}
-                    <nav className="flex space-x-4">
-                        <a href="https://www.instagram.com/" className="text-blue-200 hover:underline dark:text-blue-500" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a href="https://www.facebook.com/" className="text-blue-200 hover:underline dark:text-blue-500" target="_blank" rel="noopener noreferrer">Facebook</a>
-                        <a href="https://www.tiktok.com/" className="text-blue-200 hover:underline dark:text-blue-500" target="_blank" rel="noopener noreferrer">TikTok</a>
-                        <a href="https://www.discord.com/" className="text-blue-200 hover:underline dark:text-blue-500" target="_blank" rel="noopener noreferrer">Discord</a>
-                    </nav>
-                </div>
+            </div>
+            {/* Copyright Notice */}
+            <div className="text-center mt-4">
+                © {new Date().getFullYear()} | ROSE Foundation
             </div>
         </footer>
     );
