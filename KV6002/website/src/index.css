@@ -1,3 +1,13 @@
+/**
+ * Special comments-directives used in conjunction with the Tailwind CSS framework.
+ *
+ * '@tailwind base'  tells Tailwind CSS to include its base styles.
+ * '@tailwind components' tells Tailwind CSS to include its component styles.
+ * '@tailwind utilities' tells Tailwind CSS to include its utility styles.
+ *
+ * @author Petros Tamboutsiaris W21004471
+ */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
