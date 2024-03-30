@@ -24,7 +24,7 @@ function NewCommentForm({ user_id, thread_id, onSubmit }) {
 
     return (
         <form onSubmit={handleSubmit} className="border border-gray-300 p-4 rounded-md mb-4">
-            <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="Thread Content" required className="border border-gray-300 rounded-md p-2 w-full" />
+            <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="Thread Content" required className="border border-gray-300 rounded-md p-2 w-full dark:text-gray-900" />
             <button type="submit" className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">Add Thread</button>
         </form>
     );
