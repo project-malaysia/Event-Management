@@ -1,7 +1,7 @@
 <?php
 
 /**
- * autoloader function
+ * autoloader function.
  * 
  * Whenever a class is instantiated in PHP, the autoloader is called to look 
  * for a file named after that class, and will include that code.
