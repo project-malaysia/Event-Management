@@ -1,4 +1,7 @@
-// NewThreadForm.jsx
+/**
+ * A from allowing the user to create new threads that will then be displayed onto
+ * the page.
+ */
 import React, { useState } from 'react';
 
 function NewThreadForm({ user_id, onSubmit }) {
@@ -8,6 +11,11 @@ function NewThreadForm({ user_id, onSubmit }) {
     const handleSubmit = (e) => {
         e.preventDefault();
 
+         /**
+     * Created by John W Ridley for KV6002
+     * Take the input in the form to create a new thread and store that data into the database.
+     * Ideally keep it hosted at this location
+     */
         const threadData = new URLSearchParams();
         threadData.append('user_id', user_id);
         threadData.append('title', title);
@@ -17,12 +25,14 @@ function NewThreadForm({ user_id, onSubmit }) {
             body: threadData,
         })
 
+        //Use console.log as data wasnt't passing to the db to make help isolate the issue.
         onSubmit({ user_id, title, content });
         //console.log({ user_id, title, content });
         setTitle('');
         setContent('');
     };
 
+     //Return the from so that it can be called and displayed on the threads page.
     return (
         <div>
             <form onSubmit={handleSubmit} className="border border-gray-300 p-4 rounded-md mb-4">
