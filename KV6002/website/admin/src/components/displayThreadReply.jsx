@@ -1,3 +1,9 @@
+/**
+ * Created by John W Ridley for KV6002
+ * This file takes the input of the thread_id passed to it by the user clicking the title of the thread.
+ * Thread ID is then used to query the replies table for the replies associated with that thread.
+ */
+
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import NewCommentForm from '../components/createNewComment';
@@ -12,6 +18,8 @@ function DisplayThreadReplies() {
         getReplies(thread_id);
     }, [thread_id]);
 
+    //Get the replies from the backend hosted at the URL to fill the page.
+      //If the url changes please change! Should query fine on my nuwebspace account.
     const getReplies = async (threadId) => {
         try {
             const response = await fetch(`https://w16012692.nuwebspace.co.uk/project/backend/getReplies.php?thread_id=` + thread_id);
@@ -25,12 +33,14 @@ function DisplayThreadReplies() {
             console.error(error);
         }
     };
-
+    //When the user submits the page will be briefly refreshed to display the new reply.    
     const handleCommentSubmit = async (e) => {
         getReplies(thread_id);
         setComment('');
     };
 
+    //Return the replies for the thread so that they are displayed on the screen.
+    //Note user_id={2} This has to be hardcoded for now.
     return (
         <div className="flex flex-col min-h-screen bg-purple-200 dark:bg-gray-800">
             <div className="flex-grow">
