@@ -1,4 +1,7 @@
-//Form for adding a new comment
+/*
+*Created by John W Ridley for KV6002
+* Handles request from the user to create a new comment on a thread and inserts into the database hosted on nuwebspace.
+*/
 import React, { useState } from 'react';
 
 function NewCommentForm({ user_id, thread_id, onSubmit }) {
@@ -6,6 +9,9 @@ function NewCommentForm({ user_id, thread_id, onSubmit }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
+         //When the user presses the button on the form the parameters passed by the form are sent to the database
+        //at the URL in the fetch().
+        //Ideally don't change this as it works in this state.
 
         const commentToSend = new URLSearchParams();
         commentToSend.append('thread_id', thread_id);
@@ -22,6 +28,7 @@ function NewCommentForm({ user_id, thread_id, onSubmit }) {
         setContent('');
     };
 
+    //Form that will be displayed on the thread page allowing the user to input new comment.
     return (
         <form onSubmit={handleSubmit} className="border border-gray-300 p-4 rounded-md mb-4">
             <textarea value={content} onChange={(e) => setContent(e.target.value)} placeholder="Thread Content" required className="border border-gray-300 rounded-md p-2 w-full dark:text-gray-900" />
