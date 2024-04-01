@@ -1,3 +1,7 @@
+/**
+ * Created by John W Ridley for KV6002
+ * This is the homepage for the forum. Here the threads will be displayed onto the screen.
+ */
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import NewThreadForm from '../components/createNewThread';
@@ -14,7 +18,7 @@ function DisplayThreads() {
         getTheThreads();
     }, []);
 
-    // Function to fetch threads from the backend
+    // Function handles the backend and fetches the threads from the URL
     const getTheThreads = async () => {
         try {
             const response = await fetch('https://w16012692.nuwebspace.co.uk/project/backend/getThreads.php');
@@ -28,10 +32,13 @@ function DisplayThreads() {
         }
     };
 
+    //Do a brief refresh to display the newly added thread onto the page.
     const handleAddThread = async (newThread) => {
         getTheThreads();
     };
 
+    //The mapping for displaying the threads. Handled using Tailwind CSS to make it more appealing for the user.
+    //Again user_id is force set to 2.
     return (
         <div className="flex flex-col min-h-screen bg-purple-200 dark:bg-gray-800">
             <div className="flex-grow">
