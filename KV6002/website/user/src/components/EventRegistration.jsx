@@ -12,7 +12,7 @@ const EventRegistration = () => {
     }, []);
 
     const updateAttendeeCount = () => {
-        fetch(`http://w20013313.nuwebspace.co.uk/GroupProject/getAttendeeCount.php?eventId=${eventId}`)
+        fetch(`https://w20013313.nuwebspace.co.uk/GroupProject/getAttendeeCount.php?eventId=${eventId}`)
             .then((response) => response.json())
             .then((data) => {
                 if (data.success) {
@@ -29,7 +29,7 @@ const EventRegistration = () => {
     const handleRegister = () => {
         const userName = prompt("Please enter your initials or name:", "");
         if (userName) {
-            fetch('http://w20013313.nuwebspace.co.uk/GroupProject/connection.php', {
+            fetch('https://w20013313.nuwebspace.co.uk/GroupProject/connection.php', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/x-www-form-urlencoded',
